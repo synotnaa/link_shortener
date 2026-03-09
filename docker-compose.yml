@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    ports:
+      - '8000:8000'
+    environment:
+      DATABASE_URL: sqlite:///./study_shortener.sqlite3
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: super-secret-key
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
