@@ -9,3 +9,5 @@ python-multipart==0.0.22
 email-validator==2.3.0
 pytest==9.0.2
 httpx==0.28.1
+coverage==7.13.4
+locust==2.43.3

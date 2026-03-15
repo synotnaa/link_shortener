@@ -11,4 +11,5 @@ __pycache__/
 *.pyd
 *.sqlite3
 *.log
+*.ipynb
 pytest-cache-files-*/
